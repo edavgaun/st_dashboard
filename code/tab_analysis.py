@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 def render_analysis(dataframe):
     """
@@ -26,7 +27,7 @@ def render_analysis(dataframe):
                   delta="x.x% vs. Last Year", delta_color="normal")
         
         # Add a placeholder for vertical alignment or more context if needed
-        st.markdown("**Status:** Enrollment period is ongoing.")
+        st.markdown("**Status:** Enrollment period has finished.")
 
     # --- 2. RIGHT COLUMN: 6 PLOTS (2x3 GRID) ---
     with col_visuals:
