@@ -34,4 +34,7 @@ def create_stacked_bar_plot(df):
         barmode='stack',  # Ensure bars are stacked
         hovermode="y unified"
     )
+    fig.update_yaxes(
+        autorange="reversed"
+    )
     return fig
