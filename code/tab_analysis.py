@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from code.chart import create_stacked_bar_plot
+from code.charts import create_stacked_bar_plot
 
 def render_analysis(dataframe):
     """
