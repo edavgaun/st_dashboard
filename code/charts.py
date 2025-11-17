@@ -38,3 +38,28 @@ def create_stacked_bar_plot(df):
         autorange="reversed"
     )
     return fig
+
+def create_enrollment_timeline_plot(df):
+    fig = px.line(
+        df,
+        x='date',            # X-axis: Time (Date)
+        y='total',           # Y-axis: Enrollment Count
+        color='workshop',    # Lines grouped and colored by Workshop
+        title='Workshop Enrollment Trend Over Time',
+        labels={'total': 'Total Enrollment (Headcount)', 'date': 'Date'},
+        height=500
+    )
+
+    fig.update_layout(
+        xaxis_title="Date",
+        yaxis_title="Total Enrollment",
+        legend_title_text='Workshop',
+        hovermode="x unified"
+    )
+    
+    fig.update_xaxes(
+        dtick="M1", # Show one tick per month
+        tickformat="%b %d" # Format as Month Abbreviation and Day (e.g., Feb 28)
+    )
+
+    return fig
