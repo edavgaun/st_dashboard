@@ -5,19 +5,15 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
-from code.tab_info import render_info
+from code.tab_info import set_layout, render_info, show_header
 from code.tab_analysis import render_analysis
 from code.tab_map import render_map
 
 # --- 1. CONFIGURATION ---
-st.set_page_config(layout="wide")
+set_layout()
 
 # --- 2. HEADER BANNER (CONSTANT) ---
-def render_header():
-    """Renders a consistent header/banner across the top."""
-    st.image("utils/ELITE-TECH-logo.2022-logoweb.png", use_column_width=True) # Replace with your image file path or URL
-    st.title("📊 RCEL Summer Camp Enrollment Dashboard")
-    st.markdown("---") # Visual separator
+show_header()
 
 # --- 3. MAIN APP FUNCTION ---
 def main():
