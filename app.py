@@ -1,5 +1,5 @@
 import streamlit as st
-#from code.tab_info import render_info
+from code.tab_info import render_info
 #from code.tab_analysis import render_analysis
 #from code.tab_map import render_map
 
