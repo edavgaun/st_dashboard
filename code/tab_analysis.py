@@ -11,10 +11,10 @@ def render_analysis(dataframe):
     """
     st.header("Enrollment Performance: Analysis & KPIs")
     
-    # --- MAIN LAYOUT SPLIT: KPI (1) vs. VISUALS (4) ---
-    # Col_KPI takes 1/9th of the width (e.g., for the KPI card)
-    # Col_Visuals takes 8/9ths of the width (for the 6 plots)
-    col_kpi, col_visuals = st.columns([1, 8])
+    # --- MAIN LAYOUT SPLIT: KPI (1) vs. VISUALS (6) ---
+    # Col_KPI takes 1/8th of the width (e.g., for the KPI card)
+    # Col_Visuals takes 7/8ths of the width (for the 6 plots)
+    col_kpi, col_visuals = st.columns([1, 7])
     
     # --- 1. LEFT COLUMN: STATIC KPI CARD ---
     with col_kpi:
