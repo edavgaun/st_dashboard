@@ -12,9 +12,9 @@ def render_analysis(dataframe):
     st.header("Enrollment Performance: Analysis & KPIs")
     
     # --- MAIN LAYOUT SPLIT: KPI (1) vs. VISUALS (4) ---
-    # Col_KPI takes 1/5th of the width (e.g., for the KPI card)
-    # Col_Visuals takes 4/5ths of the width (for the 6 plots)
-    col_kpi, col_visuals = st.columns([1, 4])
+    # Col_KPI takes 1/8th of the width (e.g., for the KPI card)
+    # Col_Visuals takes 4/8ths of the width (for the 6 plots)
+    col_kpi, col_visuals = st.columns([1, 7])
     
     # --- 1. LEFT COLUMN: STATIC KPI CARD ---
     with col_kpi:
@@ -46,8 +46,11 @@ def render_analysis(dataframe):
                 st.warning("Data for Stacked Bar Plot is unavailable or invalid.")
             
         with row1_col2:
-            # STATIC CHART 2: Example is now a Bar Chart
-            st.bar_chart(np.random.rand(5, 4), use_container_width=True)
+            line_plot = create_enrollment_timeline_plot(df)
+            if line_plot:
+                st.plotly_chart(line_plot, use_container_width=True)
+            else:
+                st.warning("Data for Timeline Plot is unavailable or invalid.")
 
         # Row 2 (Visuals 3 and 4 - DYNAMIC/PLACEHOLDER)
         row2_col1, row2_col2 = st.columns(2)
