@@ -57,7 +57,7 @@ def show_header():
         # Caption with attribution details
         st.caption("📘 Made by: Dr. Edgar Avalos-Gauna, RCEL 698/699")
         st.caption("💻 Streamlit Workshop: How to create an interactive dashboard")
-        st.caption("📅 November 20th, 2025)
+        st.caption("📅 November 20th, 2025")
     
     # --- Separator ---
     st.markdown("---")
