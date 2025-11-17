@@ -58,6 +58,7 @@ def show_header():
         st.caption("📘 Made by: Dr. Edgar Avalos-Gauna, RCEL 698/699")
         st.caption("💻 Streamlit Workshop: How to create an interactive dashboard")
         st.caption("📅 November 20th, 2025")
+        st.markdown("Pick a tab 👇")
     
     # --- Separator ---
     st.markdown("---")
