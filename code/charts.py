@@ -6,6 +6,7 @@ def create_stacked_bar_plot(df):
     value_vars = ['w1', 'w2', 'w3', 'w4']
     
     # Melt the DataFrame
+    df=df.sort_values(['dot', 'workshop'])
     df_long = df.melt(
         id_vars=['workshop'],
         value_vars=value_vars,
