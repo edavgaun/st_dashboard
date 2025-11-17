@@ -137,7 +137,7 @@ def student_commute_plot(df_long_data, selected_date):
     axs.invert_yaxis() # Invert Y-axis so Week 1 is on top
 
     # Customize Title and Legend Placement
-    plt.title("Weekly Attendance (Headcount) for RCEL Campers:", x=0.1, y=1.2)
+    plt.title("Weekly Commute-Attendance (Headcount) for RCEL Campers:", x=0.1, y=1.2)
     
     # Manually get handles/labels to remove the 'size' legend entries
     handles, labels = axs.get_legend_handles_labels()
