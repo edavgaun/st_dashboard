@@ -33,3 +33,4 @@ def create_stacked_bar_plot(df):
         barmode='stack',  # Ensure bars are stacked
         hovermode="y unified"
     )
+    return fig
