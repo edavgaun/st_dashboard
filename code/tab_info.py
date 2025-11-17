@@ -55,7 +55,8 @@ def show_header():
         st.title("📊 RCEL Summer Camp Enrollment Dashboard")
         
         # Caption with attribution details
-        st.caption("📘 Made by: Edgar Avalos-Gauna (2025), RCEL 506")
+        st.caption("📘 Made by: Edgar Avalos-Gauna (2025), RCEL 698/699")
+        st.caption("💻 Streamlit Workshop: How to create an interactive dashboar")
     
     # --- Separator ---
     st.markdown("---")
