@@ -46,7 +46,7 @@ def show_header():
     with col1:
         st.image(
             "utils/ELITE-TECH-logo.2022-logoweb.png",
-            width=80,  # Explicitly set a small width for your large image
+            width=200,  # Explicitly set a small width for your large image
         )
         
     # --- Column 2: Title and Caption ---
