@@ -29,8 +29,6 @@ def load_and_cache_data(file_path):
 
 df=load_and_cache_data('data/data.csv')
 
-st.write(df)
-
 # --- 1. CONFIGURATION ---
 set_layout()
 
