@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-def render_analysis():
+def render_analysis(dataframe):
     """
     Renders the Analysis & KPIs tab with a fixed KPI column (left)
     and a 2x3 grid of visuals (right).
@@ -30,6 +30,7 @@ def render_analysis():
 
     # --- 2. RIGHT COLUMN: 6 PLOTS (2x3 GRID) ---
     with col_visuals:
+        df=dataframe
         st.subheader("Enrollment Visualizations (Weekly & Program Breakdown)")
         
         # Row 1 (Visuals 1 and 2 - STATIC)
