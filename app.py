@@ -28,7 +28,7 @@ def load_and_cache_data(file_path):
         return pd.DataFrame()
 
 df=load_and_cache_data('data/data.csv')
-longdf=load_and_cache_data('data/data.csv')
+longdf=load_and_cache_data('data/student_long.csv')
 
 
 # --- 1. CONFIGURATION ---
