@@ -57,13 +57,13 @@ def render_analysis(dataframe, longdataframe):
         row2_col1, row2_col2 = st.columns(2)
         
         with row2_col1:
-            if selected_date and not df_long_data.empty:
-                selected_date = st.select_slider(
+            selected_date = st.select_slider(
                     'Select Enrollment Date:',
                     options=date_options,
                     value=date_options[-1] if date_options else None, # Default to the latest date
                     help="Select the date for which to view the Commuter vs. Residential breakdown."
                 )
+            if selected_date and not df_long_data.empty:
                 commute_fig = student_commute_plot(df_long_data, selected_date)
                 st.pyplot(commute_fig, use_container_width=True)
             else:
