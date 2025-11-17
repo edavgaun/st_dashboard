@@ -4,7 +4,7 @@ import numpy as np
 import plotly.express as px
 from code.charts import create_stacked_bar_plot, create_enrollment_timeline_plot
 
-def render_analysis(dataframe):
+def render_analysis(dataframe, longdataframe):
     """
     Renders the Analysis & KPIs tab with a fixed KPI column (left)
     and a 2x3 grid of visuals (right).
@@ -33,6 +33,7 @@ def render_analysis(dataframe):
     # --- 2. RIGHT COLUMN: 6 PLOTS (2x3 GRID) ---
     with col_visuals:
         df=dataframe
+        df_long_data=longdataframe
         st.subheader("Enrollment Visualizations (Weekly & Program Breakdown)")
         
         # Row 1 (Visuals 1 and 2 - STATIC)
@@ -56,8 +57,17 @@ def render_analysis(dataframe):
         row2_col1, row2_col2 = st.columns(2)
         
         with row2_col1:
-            st.caption("Visual 3 (Dynamic): Placeholder")
-            st.info("Chart 3 will be placed here.")
+            if selected_date and not df_long_data.empty:
+                selected_date = st.select_slider(
+                    'Select Enrollment Date:',
+                    options=date_options,
+                    value=date_options[-1] if date_options else None, # Default to the latest date
+                    help="Select the date for which to view the Commuter vs. Residential breakdown."
+                )
+                commute_fig = student_commute_plot(df_long_data, selected_date)
+                st.pyplot(commute_fig, use_container_width=True)
+            else:
+                st.info("Select a date to view the attendance breakdown.")
             
         with row2_col2:
             st.caption("Visual 4 (Dynamic): Placeholder")
