@@ -17,7 +17,6 @@ show_header()
 
 # --- 3. MAIN APP FUNCTION ---
 def main():
-    render_header()
     
     # Create the three tabs
     tab1, tab2, tab3 = st.tabs(["🚀 How it Works", "📈 Analysis & KPIs", "🗺️ Choropleth Map"])
