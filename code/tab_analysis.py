@@ -34,7 +34,12 @@ def render_analysis(dataframe, longdataframe):
     with col_visuals:
         df=dataframe
         df_long_data=longdataframe
-        date_options=df_long_data['date'].unique()
+        selected_date = None
+        date_options = []
+
+        if not df_long_data.empty and 'date' in df_long_data.columns:
+            date_options = [str(l) for l in sorted(df_long_data['date'].unique())]
+        
         st.subheader("Enrollment Visualizations (Weekly & Program Breakdown)")
         
         # Row 1 (Visuals 1 and 2 - STATIC)
