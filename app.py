@@ -28,6 +28,8 @@ def load_and_cache_data(file_path):
         return pd.DataFrame()
 
 df=load_and_cache_data('data/data.csv')
+longdf=load_and_cache_data('data/data.csv')
+
 
 # --- 1. CONFIGURATION ---
 set_layout()
@@ -46,7 +48,7 @@ def main():
         render_info()
     
     with tab2:
-        render_analysis(df)
+        render_analysis(df, longdf)
         
     with tab3:
         render_map()
