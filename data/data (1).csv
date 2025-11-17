@@ -1,0 +1,113 @@
+tod,workshop,total,w1,w2,w3,w4,date
+A.M.,3D Modeling & 3D Printing,51,25,9,11,6,2025-02-28
+A.M.,Deep Learning,29,17,5,3,4,2025-02-28
+A.M.,Robotic Engineering I,58,32,9,5,12,2025-02-28
+A.M.,Trifecta Tech,36,23,6,5,2,2025-02-28
+P.M.,Bioengineering for Future Leaders,44,26,7,7,4,2025-02-28
+P.M.,Learning C++,31,19,3,5,4,2025-02-28
+P.M.,Learning Python,56,31,11,8,6,2025-02-28
+P.M.,Robotic Engineering II,42,20,8,4,10,2025-02-28
+A.M.,3D Modeling & 3D Printing,74,36,13,15,10,2025-04-02
+A.M.,Deep Learning,47,20,11,8,8,2025-04-02
+A.M.,Robotic Engineering I,90,40,19,11,20,2025-04-02
+A.M.,Trifecta Tech,54,27,12,7,8,2025-04-02
+P.M.,Bioengineering for Future Leaders,76,34,17,14,11,2025-04-02
+P.M.,Learning C++,45,25,7,9,4,2025-04-02
+P.M.,Learning Python,81,39,17,11,14,2025-04-02
+P.M.,Robotic Engineering II,62,24,14,7,17,2025-04-02
+A.M.,3D Modeling & 3D Printing,86,37,17,19,13,2025-04-17
+A.M.,Deep Learning,58,21,17,8,12,2025-04-17
+A.M.,Robotic Engineering I,105,40,25,17,23,2025-04-17
+A.M.,Trifecta Tech,69,31,19,10,9,2025-04-17
+P.M.,Bioengineering for Future Leaders,90,37,24,16,13,2025-04-17
+P.M.,Learning C++,54,26,9,13,6,2025-04-17
+P.M.,Learning Python,99,40,29,12,18,2025-04-17
+P.M.,Robotic Engineering II,74,25,16,13,20,2025-04-17
+A.M.,3D Modeling & 3D Printing,106,39,26,24,17,2025-05-01
+A.M.,Deep Learning,70,23,22,10,15,2025-05-01
+A.M.,Robotic Engineering I,125,40,32,25,28,2025-05-01
+A.M.,Trifecta Tech,79,32,26,10,11,2025-05-01
+P.M.,Bioengineering for Future Leaders,105,40,32,20,13,2025-05-01
+P.M.,Learning C++,70,28,17,14,11,2025-05-01
+P.M.,Learning Python,108,40,32,15,21,2025-05-01
+P.M.,Robotic Engineering II,96,25,25,20,26,2025-05-01
+A.M.,3D Modeling & 3D Printing,121,39,32,28,22,2025-05-08
+A.M.,Deep Learning,82,25,23,16,18,2025-05-08
+A.M.,Robotic Engineering I,135,40,32,32,31,2025-05-08
+A.M.,Trifecta Tech,88,33,27,11,17,2025-05-08
+P.M.,Bioengineering for Future Leaders,115,40,32,23,20,2025-05-08
+P.M.,Learning C++,81,28,21,19,13,2025-05-08
+P.M.,Learning Python,118,40,32,20,26,2025-05-08
+P.M.,Robotic Engineering II,111,28,29,25,29,2025-05-08
+A.M.,3D Modeling & 3D Printing,131,40,32,33,26,2025-05-15
+A.M.,Deep Learning,86,25,28,16,17,2025-05-15
+A.M.,Robotic Engineering I,137,40,32,32,33,2025-05-15
+A.M.,Trifecta Tech,92,33,28,14,17,2025-05-15
+P.M.,Bioengineering for Future Leaders,119,40,32,24,23,2025-05-15
+P.M.,Learning C++,87,28,25,22,12,2025-05-15
+P.M.,Learning Python,121,40,32,23,26,2025-05-15
+P.M.,Robotic Engineering II,116,29,30,26,31,2025-05-15
+A.M.,3D Modeling & 3D Printing,134,40,32,32,30,2025-05-22
+A.M.,Deep Learning,91,27,26,22,16,2025-05-22
+A.M.,Robotic Engineering I,136,40,32,32,32,2025-05-22
+A.M.,Trifecta Tech,95,32,30,14,19,2025-05-22
+P.M.,Bioengineering for Future Leaders,123,39,32,26,26,2025-05-22
+P.M.,Learning C++,89,29,24,23,13,2025-05-22
+P.M.,Learning Python,120,39,32,23,26,2025-05-22
+P.M.,Robotic Engineering II,122,31,32,28,31,2025-05-22
+A.M.,3D Modeling & 3D Printing,138,40,32,34,32,2025-05-30
+A.M.,Deep Learning,92,28,26,22,16,2025-05-30
+A.M.,Robotic Engineering I,141,40,32,36,33,2025-05-30
+A.M.,Trifecta Tech,99,32,32,14,21,2025-05-30
+P.M.,Bioengineering for Future Leaders,92,29,26,23,14,2025-05-30
+P.M.,Learning C++,122,39,32,23,28,2025-05-30
+P.M.,Learning Python,126,40,32,28,26,2025-05-30
+P.M.,Robotic Engineering II,127,31,32,32,32,2025-05-30
+A.M.,3D Modeling & 3D Printing,139,40,32,35,32,2025-06-06
+A.M.,Deep Learning,96,28,27,25,16,2025-06-06
+A.M.,Robotic Engineering I,142,40,32,36,34,2025-06-06
+A.M.,Trifecta Tech,98,31,32,14,21,2025-06-06
+P.M.,Bioengineering for Future Leaders,94,29,27,24,14,2025-06-06
+P.M.,Learning C++,123,38,32,24,29,2025-06-06
+P.M.,Learning Python,129,40,32,30,27,2025-06-06
+P.M.,Robotic Engineering II,128,32,32,32,32,2025-06-06
+A.M.,3D Modeling & 3D Printing,139,40,32,35,32,2025-06-12
+A.M.,Deep Learning,97,29,28,24,16,2025-06-12
+A.M.,Robotic Engineering I,140,40,32,36,32,2025-06-12
+A.M.,Trifecta Tech,97,31,32,14,20,2025-06-12
+P.M.,Bioengineering for Future Leaders,125,40,32,28,25,2025-06-12
+P.M.,Learning C++,95,29,28,24,14,2025-06-12
+P.M.,Learning Python,125,39,32,25,29,2025-06-12
+P.M.,Robotic Engineering II,126,32,32,32,30,2025-06-12
+A.M.,3D Modeling & 3D Printing,140,40,31,36,33,2025-06-27
+A.M.,Deep Learning,99,29,28,25,17,2025-06-27
+A.M.,Robotic Engineering I,144,40,32,36,36,2025-06-27
+A.M.,Trifecta Tech,100,31,32,16,21,2025-06-27
+P.M.,Bioengineering for Future Leaders,132,40,32,31,29,2025-06-27
+P.M.,Learning C++,97,29,28,25,15,2025-06-27
+P.M.,Learning Python,127,39,32,25,31,2025-06-27
+P.M.,Robotic Engineering II,126,32,31,32,31,2025-06-27
+A.M.,3D Modeling & 3D Printing,143,40,31,36,36,2025-07-03
+A.M.,Deep Learning,100,29,28,25,18,2025-07-03
+A.M.,Robotic Engineering I,144,40,31,36,37,2025-07-03
+A.M.,Trifecta Tech,100,31,32,17,20,2025-07-03
+P.M.,Bioengineering for Future Leaders,135,40,32,31,32,2025-07-03
+P.M.,Learning C++,98,29,28,25,16,2025-07-03
+P.M.,Learning Python,126,39,32,25,30,2025-07-03
+P.M.,Robotic Engineering II,126,32,30,32,32,2025-07-03
+A.M.,3D Modeling & 3D Printing,143,40,31,36,36,2025-07-11
+A.M.,Deep Learning,102,29,28,25,20,2025-07-11
+A.M.,Robotic Engineering I,145,40,31,36,38,2025-07-11
+A.M.,Trifecta Tech,101,31,32,17,21,2025-07-11
+P.M.,Bioengineering for Future Leaders,135,40,32,31,32,2025-07-11
+P.M.,Learning C++,102,29,28,25,20,2025-07-11
+P.M.,Learning Python,126,39,32,25,30,2025-07-11
+P.M.,Robotic Engineering II,126,32,30,32,32,2025-07-11
+A.M.,3D Modeling & 3D Printing,143,40,31,36,36,2025-07-17
+A.M.,Deep Learning,102,29,28,25,20,2025-07-17
+A.M.,Robotic Engineering I,144,40,31,36,37,2025-07-17
+A.M.,Trifecta Tech,104,31,32,17,24,2025-07-17
+P.M.,Bioengineering for Future Leaders,136,40,32,31,33,2025-07-17
+P.M.,Learning C++,103,29,28,25,21,2025-07-17
+P.M.,Learning Python,127,39,32,25,31,2025-07-17
+P.M.,Robotic Engineering II,126,32,30,32,32,2025-07-17
