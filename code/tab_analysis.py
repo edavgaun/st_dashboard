@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from code.charts import create_stacked_bar_plot
+from code.charts import create_stacked_bar_plot, create_enrollment_timeline_plot
 
 def render_analysis(dataframe):
     """
@@ -39,7 +39,6 @@ def render_analysis(dataframe):
         row1_col1, row1_col2 = st.columns(2)
         
         with row1_col1:
-            st.caption("Visual 1 (Static): Stacked bar plot for program enrollment")
             stacked_fig = create_stacked_bar_plot(df)
             if stacked_fig:
                 st.plotly_chart(stacked_fig, use_container_width=True)
@@ -47,7 +46,6 @@ def render_analysis(dataframe):
                 st.warning("Data for Stacked Bar Plot is unavailable or invalid.")
             
         with row1_col2:
-            st.caption("Visual 2 (Static): Program Attendance Breakdown")
             # STATIC CHART 2: Example is now a Bar Chart
             st.bar_chart(np.random.rand(5, 4), use_container_width=True)
 
