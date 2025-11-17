@@ -1,4 +1,9 @@
-import streamlit as st
+import streamlit as stimport sys
+import os
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
+
 from code.tab_info import render_info
 #from code.tab_analysis import render_analysis
 #from code.tab_map import render_map
