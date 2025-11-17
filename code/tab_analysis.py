@@ -40,7 +40,11 @@ def render_analysis(dataframe):
         
         with row1_col1:
             st.caption("Visual 1 (Static): Stacked bar plot for program enrollment")
-            create_stacked_bar_plot(df)
+            stacked_fig = create_stacked_bar_plot(df)
+            if stacked_fig:
+                st.plotly_chart(stacked_fig, use_container_width=True)
+            else:
+                st.warning("Data for Stacked Bar Plot is unavailable or invalid.")
             
         with row1_col2:
             st.caption("Visual 2 (Static): Program Attendance Breakdown")
