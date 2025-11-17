@@ -3,15 +3,11 @@ import plotly.express as px
 import streamlit as st
 
 def create_stacked_bar_plot(df):
-    id_vars = [df.columns[0]] # Assumes the first column is the workshop name
     value_vars = ['w1', 'w2', 'w3', 'w4']
-
-    # Rename the Workshop column for clarity if it's not named 'Workshop' already
-    df.rename(columns={id_vars[1]: 'Workshop'}, inplace=True)
     
     # Melt the DataFrame
     df_long = df.melt(
-        id_vars=['Workshop'],
+        id_vars=['workshop'],
         value_vars=value_vars,
         var_name='Week',
         value_name='Attendance'
@@ -21,7 +17,7 @@ def create_stacked_bar_plot(df):
     fig = px.bar(
         df_long,
         x='Attendance',      # X-axis: The value (the length of the bar)
-        y='Workshop',        # Y-axis: The categories (the workshops)
+        y='workshop',        # Y-axis: The categories (the workshops)
         color='Week',        # Color/Stacking Group: W1, W2, W3, W4
         orientation='h',     # Make it horizontal
         title='Weekly Enrollment Composition by Workshop',
