@@ -12,9 +12,9 @@ def render_analysis(dataframe):
     st.header("Enrollment Performance: Analysis & KPIs")
     
     # --- MAIN LAYOUT SPLIT: KPI (1) vs. VISUALS (4) ---
-    # Col_KPI takes 2/9th of the width (e.g., for the KPI card)
-    # Col_Visuals takes 7/9ths of the width (for the 6 plots)
-    col_kpi, col_visuals = st.columns([2, 7])
+    # Col_KPI takes 1/9th of the width (e.g., for the KPI card)
+    # Col_Visuals takes 8/9ths of the width (for the 6 plots)
+    col_kpi, col_visuals = st.columns([1, 8])
     
     # --- 1. LEFT COLUMN: STATIC KPI CARD ---
     with col_kpi:
@@ -23,7 +23,7 @@ def render_analysis(dataframe):
         total_enrollment = 985
         
         # KPI Card for Total Enrollment
-        st.metric(label="Total Enrollment\n(Headcount)", 
+        st.metric(label="Total Enrollment (Count)", 
                   value=f"{total_enrollment}", 
                   delta="x.x% vs. Last Year", delta_color="normal")
         
