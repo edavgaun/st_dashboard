@@ -30,6 +30,9 @@ def render_info():
     
     ### ⚙️ Data Source:
     Data was kindly shared by the RCEL Office for this workshop.
+
+    ### ⚙️ Final Remarks:
+    Python and Markdown were used as core tools for development. Additional tools include HTML for better visuals/interaction and LLM to clean and blend everything together.
     """)
 
 def show_header():
