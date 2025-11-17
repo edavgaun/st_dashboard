@@ -86,7 +86,7 @@ def student_commute_plot(df_long_data, selected_date):
     xmax = (df_long_data['count'].max() // 10 + 1) * 10
     xmin = (df_long_data['count'].min() // 10 - 1) * 10
 
-    fig, axs = plt.subplots(figsize=(5, 5))
+    fig, axs = plt.subplots(figsize=(5, 4))
 
     # 3. Draw Connecting Lines and Week Labels
     for w in range(5):
