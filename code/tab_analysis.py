@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+from code.chart import create_stacked_bar_plot
 
 def render_analysis(dataframe):
     """
@@ -38,9 +39,8 @@ def render_analysis(dataframe):
         row1_col1, row1_col2 = st.columns(2)
         
         with row1_col1:
-            st.caption("Visual 1 (Static): Commuter vs. Residential Trend")
-            # STATIC CHART 1: Example is now a Line Chart
-            st.line_chart(np.random.rand(5, 2), use_container_width=True)
+            st.caption("Visual 1 (Static): Stacked bar plot for program enrollment")
+            create_stacked_bar_plot(df)
             
         with row1_col2:
             st.caption("Visual 2 (Static): Program Attendance Breakdown")
