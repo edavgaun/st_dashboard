@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
 # --- 2. HEADER BANNER (CONSTANT) ---
 def render_header():
     """Renders a consistent header/banner across the top."""
-    st.image("your_banner_image.png", use_column_width=True) # Replace with your image file path or URL
+    st.image("utils/ELITE-TECH-logo.2022-logoweb.png", use_column_width=True) # Replace with your image file path or URL
     st.title("📊 RCEL Summer Camp Enrollment Dashboard")
     st.markdown("---") # Visual separator
 
