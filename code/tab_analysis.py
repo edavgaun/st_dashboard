@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from code.charts import create_stacked_bar_plot, create_enrollment_timeline_plot, student_commute_plot
+from code.charts import create_stacked_bar_plot, create_enrollment_timeline_plot, student_commute_plot, create_polar_chart_byweek
 
 def render_analysis(dataframe, longdataframe):
     """
@@ -35,8 +35,12 @@ def render_analysis(dataframe, longdataframe):
         df=dataframe
         df_long_data=longdataframe
         selected_date = None
+        dates=[]
         date_options = []
 
+        if not df.empty and 'date' in df.columns:
+            dates = [str(l) for l in sorted(df['date'].unique())]
+            
         if not df_long_data.empty and 'date' in df_long_data.columns:
             date_options = [str(l) for l in sorted(df_long_data['date'].unique())]
         
@@ -76,8 +80,17 @@ def render_analysis(dataframe, longdataframe):
                 st.info("Select a date to view the attendance breakdown.")
             
         with row2_col2:
-            st.caption("Visual 4 (Dynamic): Placeholder")
-            st.info("Chart 4 will be placed here.")
+            selected_date_all = st.select_slider(
+                    'Select Enrollment Date:',
+                    options=dates,
+                    value=dates[-1] if date_options else None, # Default to the latest date
+                    help="Select the date for Workshop enrollment."
+                )
+            radar_plot = create_polar_chart_byweek(df, selected_date_all.value, ['w1', 'w2', 'w3', 'w4'])
+            if radar_plot:
+                st.plotly_chart(radar_plot, use_container_width=True)
+            else:
+                st.warning("Data for Radar Plot is unavailable or invalid.")
             
         # Row 3 (Visuals 5 and 6 - DYNAMIC/PLACEHOLDER)
         row3_col1, row3_col2 = st.columns(2)
