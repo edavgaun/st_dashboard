@@ -152,3 +152,76 @@ def student_commute_plot(df_long_data, selected_date):
     plt.tight_layout(pad=3) # Add padding to prevent cutoffs
 
     return fig
+
+def create_polar_chart_byweek(df_wide, date, selected_weeks):
+    """
+    Re-implements the polar chart using Plotly Express.
+    This chart expects the data in the wide format (workshop, w1, w2, w3, w4).
+    """
+    if df_wide.empty or not selected_weeks:
+        return None
+        
+    # Assuming 'date' column is available for filtering, though the wide data might be 
+    # aggregated or structured differently depending on the app's real logic.
+    # We will filter by the selected date.
+    data_oneweek = df_wide[df_wide['date'].astype(str) == date]
+    
+    if data_oneweek.empty:
+        return None
+
+    # Set workshop as index and select the columns (weeks) chosen by the user
+    data_indexed = data_oneweek.set_index('workshop')
+    df_weeks = data_indexed[list(selected_weeks)]
+
+    # 1. Normalize (Max capacity is hardcoded as 40, matching the original code)
+    MAX_CAP = 40
+    df_normalized = df_weeks.apply(lambda x: x / MAX_CAP, axis=1)
+
+    # 2. Convert to Long Format (Crucial for Plotly radar chart)
+    # The 'workshop' becomes the index (spokes), and 'week' becomes the color (lines/polygons).
+    df_plot = df_normalized.reset_index().melt(
+        id_vars='workshop', 
+        var_name='week', 
+        value_name='enrollment_pct' # Renamed to enrollment_pct
+    )
+    
+    # 3. Create the Plotly Polar Chart
+    fig = px.line_polar(
+        df_plot,
+        r='enrollment_pct',      # Radial dimension (the percentage)
+        theta='workshop',        # Angular dimension (the spokes)
+        color='week',            # The line/polygon to draw (one per selected week)
+        line_close=True,         # Close the web/polygon
+        range_r=[0, 1],          # Set scale from 0 to 100%
+        title=f"Workshop Enrollment Capacity on {date}",
+        template="plotly_dark"
+    )
+
+    fig.update_traces(fill='toself', opacity=0.3)
+    
+    fig.update_layout(
+        # Manually set the radial axis ticks (0.25, 0.50, 0.75, 1.0)
+        polar=dict(
+            radialaxis=dict(
+                visible=True,
+                range=[0, 1],
+                tickvals=[0.25, 0.5, 0.75, 1.0],
+                ticktext=['25%', '50%', '75%', '100%'],
+                showline=False,
+                linewidth=0,
+                gridcolor="rgba(255, 255, 255, 0.5)",
+            ),
+            # Set angular axis properties
+            angularaxis=dict(
+                rotation=90,
+                direction="clockwise",
+                showline=False,
+                linewidth=0,
+                gridcolor="rgba(255, 255, 255, 0.5)",
+            )
+        ),
+        legend_title="Week",
+        margin=dict(l=50, r=50, t=80, b=50)
+    )
+    
+    return fig
