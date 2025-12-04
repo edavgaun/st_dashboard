@@ -7,22 +7,7 @@ def render_map():
     st.header("Geographic Origin of Campers")
 
     # --- LOAD REAL DATA ---
-    try:
-        map_data = pd.read_csv("data/state_freq.csv")
-
-        # --- CLEAN & VALIDATE ---
-        # Normalize column names
-        map_data.columns = map_data.columns.str.strip().str.capitalize()
-
-        # Ensure expected columns exist
-        if "State" not in map_data.columns or "Count" not in map_data.columns:
-            st.error("CSV must contain 'State' and 'Count' columns.")
-            st.write("Columns found:", list(map_data.columns))
-            return
-
-    except Exception as e:
-        st.error(f"Error loading CSV: {e}")
-        return
+    map_data = pd.read_csv("data/state_freq.csv")
 
     # --- PLOT ---
     try:
@@ -30,7 +15,7 @@ def render_map():
             map_data,
             locations="State",
             locationmode="USA-states",
-            color="Count",
+            color="count",
             scope="usa",
             color_continuous_scale="Viridis",
             title="Camper Enrollment by State"
