@@ -24,9 +24,6 @@ def render_map():
 
         fig.update_layout(
             margin={"r": 0, "t": 40, "l": 0, "b": 0},
-            paper_bgcolor="#000121",   # Dark paper background
-            plot_bgcolor="#000121",    # Background behind axes (if any)
-            geo_bgcolor="#000121"      # Background for the map itself
         )
 
         st.plotly_chart(fig, use_container_width=True)
