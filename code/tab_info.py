@@ -7,12 +7,12 @@ def set_layout():
         <style>
             /* Main page background */
             .stApp {
-                background-color: white;
+                background-color: darkblue;
             }
 
             /* Sidebar background */
             section[data-testid="stSidebar"] {
-                background-color: white;
+                background-color: darkblue;
             }
 
             /* Main container padding adjustments (your original code) */
