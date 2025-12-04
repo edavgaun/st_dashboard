@@ -18,7 +18,7 @@ def render_map():
             locationmode="USA-states",
             color="count",
             scope="usa",
-            color_continuous_scale="Inferno",
+            color_continuous_scale="Blues",
             title="Camper Enrollment by State"
         )
 
