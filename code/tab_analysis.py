@@ -83,10 +83,10 @@ def render_analysis(dataframe, longdataframe):
             selected_date_all = st.select_slider(
                     'Select Enrollment Date:',
                     options=dates,
-                    value=dates[-1] if date_options else None, # Default to the latest date
+                    value = dates[-1] if dates else None
                     help="Select the date for Workshop enrollment."
                 )
-            radar_plot = create_polar_chart_byweek(df, selected_date_all.value, ['w1', 'w2', 'w3', 'w4'])
+            radar_plot = create_polar_chart_byweek(df, selected_date_all, ['w1', 'w2', 'w3', 'w4'])
             if radar_plot:
                 st.plotly_chart(radar_plot, use_container_width=True)
             else:
