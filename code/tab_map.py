@@ -8,6 +8,7 @@ def render_map():
 
     # --- LOAD REAL DATA ---
     map_data = pd.read_csv("data/state_freq.csv")
+    map_data.columns=['State', 'count']
 
     # --- PLOT ---
     try:
