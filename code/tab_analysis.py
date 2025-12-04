@@ -70,7 +70,7 @@ def render_analysis(dataframe, longdataframe):
             selected_date = st.select_slider(
                     'Select Enrollment Date:',
                     options=date_options,
-                    value=date_options[-1] if date_options else None, # Default to the latest date
+                    value=date_options[-1] if date_options else None,
                     help="Select the date for which to view the Commuter vs. Residential breakdown."
                 )
             if selected_date and not df_long_data.empty:
@@ -83,7 +83,7 @@ def render_analysis(dataframe, longdataframe):
             selected_date_all = st.select_slider(
                     'Select Enrollment Date:',
                     options=dates,
-                    value = dates[-1] if dates else None
+                    value = dates[-1] if dates else None,
                     help="Select the date for Workshop enrollment."
                 )
             radar_plot = create_polar_chart_byweek(df, selected_date_all, ['w1', 'w2', 'w3', 'w4'])
