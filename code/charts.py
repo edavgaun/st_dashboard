@@ -35,7 +35,9 @@ def create_stacked_bar_plot(df):
         xaxis_title=None,
         yaxis_title=None,
         barmode='stack',  # Ensure bars are stacked
-        hovermode="y unified"
+        hovermode="y unified",
+        paper_bgcolor="#000121",
+        plot_bgcolor="#000121"
     )
     fig.update_yaxes(
         autorange="reversed"
@@ -57,7 +59,9 @@ def create_enrollment_timeline_plot(df):
         xaxis_title="Date",
         yaxis_title="Total Enrollment",
         legend_title_text='Workshop',
-        hovermode="x unified"
+        hovermode="x unified",
+        paper_bgcolor="#000121",
+        plot_bgcolor="#000121"
     )
     
     fig.update_xaxes(
@@ -201,6 +205,8 @@ def create_polar_chart_byweek(df_wide, date, selected_weeks):
     
     fig.update_layout(
         # Manually set the radial axis ticks (0.25, 0.50, 0.75, 1.0)
+        paper_bgcolor="#000121",
+        plot_bgcolor="#000121",
         polar=dict(
             radialaxis=dict(
                 visible=True,
