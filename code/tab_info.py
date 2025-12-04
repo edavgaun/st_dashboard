@@ -2,16 +2,29 @@ import streamlit as st
 
 def set_layout():
     st.set_page_config(layout="wide")
+
     st.markdown("""
         <style>
+            /* Main page background */
+            .stApp {
+                background-color: white;
+            }
+
+            /* Sidebar background */
+            section[data-testid="stSidebar"] {
+                background-color: white;
+            }
+
+            /* Main container padding adjustments (your original code) */
             .block-container {
                 padding-top: 4rem;
                 padding-bottom: 1rem;
                 padding-left: 2rem;
                 padding-right: 2rem;
             }
+
             .css-18e3th9 {
-                padding-top: 0rem !important;
+                padding-top: 0rem;
             }
         </style>
     """, unsafe_allow_html=True)
