@@ -24,6 +24,7 @@ def render_map():
 
         fig.update_layout(
             margin={"r": 0, "t": 40, "l": 0, "b": 0},
+            paper_bgcolor="#000121",
         )
 
         st.plotly_chart(fig, use_container_width=True)
