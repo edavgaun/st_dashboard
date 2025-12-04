@@ -4,7 +4,7 @@ import pandas as pd
 
 def render_map():
     """Renders the Choropleth map content."""
-    st.header("Geographic Origin of Campers")
+    st.header("Geographic Origin of non Texan Campers")
 
     # --- LOAD REAL DATA ---
     map_data = pd.read_csv("data/state_freq.csv")
