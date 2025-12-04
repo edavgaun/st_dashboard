@@ -91,14 +91,3 @@ def render_analysis(dataframe, longdataframe):
                 st.plotly_chart(radar_plot, use_container_width=True)
             else:
                 st.warning("Data for Radar Plot is unavailable or invalid.")
-            
-        # Row 3 (Visuals 5 and 6 - DYNAMIC/PLACEHOLDER)
-        row3_col1, row3_col2 = st.columns(2)
-        
-        with row3_col1:
-            st.caption("Visual 5 (Dynamic): Placeholder")
-            st.info("Chart 5 will be placed here.")
-            
-        with row3_col2:
-            st.caption("Visual 6 (Dynamic): Placeholder")
-            st.info("Chart 6 will be placed here.")
